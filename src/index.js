@@ -1,3 +1,3 @@
-import longClick from './directives/longclick';
+import longClick from './directives/longclick'
 
 export const longClickDirective = longClick
