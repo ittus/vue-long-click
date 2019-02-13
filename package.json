@@ -1,6 +1,6 @@
 {
   "name": "vue-long-click",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "author": "Vu Minh Thang <vuminhthang.cm@gmail.com>",
   "description": "Long click (longpress) directive library for VueJS",

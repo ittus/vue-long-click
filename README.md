@@ -4,6 +4,8 @@
 
 [![npm version](https://badge.fury.io/js/vue-long-click.svg)](https://www.npmjs.com/package/vue-long-click)
 
+Checkout the demo at https://ittus.github.io/vue-long-click/
+
 ![DemoGIF](./images/demo.gif)
 
 ## Install
@@ -24,7 +26,7 @@ Vue.directive('longclick', longClickInstance)
 ```javascript
 <button v-longclick="() => changeValue(1)">+</button>
 ```
-Checkout the demo here
+
 
 ## Config
 
