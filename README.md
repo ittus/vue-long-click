@@ -1,6 +1,8 @@
 # vue-long-click
 
-Vue long click (longpress) directive
+> Vue long click (longpress) directive
+
+[![npm version](https://badge.fury.io/js/vue-long-click.svg)](https://www.npmjs.com/package/vue-long-click)
 
 ![DemoGIF](./images/demo.gif)
 
@@ -41,7 +43,7 @@ yarn install
 yarn run serve
 
 ## Build library
-yarn run build-lib
+yarn run build:lib
 
 ## Run tests
 yarn run test

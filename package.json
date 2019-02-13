@@ -12,9 +12,10 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build:docs": "vue-cli-service build --dest dist/docs",
+    "build": "yarn build:docs && yarn build:lib",
     "lint": "vue-cli-service lint",
-    "build-lib": "vue-cli-service build --target lib --name vue-long-click ./src/index.js"
+    "build:lib": "vue-cli-service build --target lib --dest dist/libs --name vue-long-click ./src/index.js"
   },
   "keywords": [
     "longpress",
@@ -25,7 +26,7 @@
   "dependencies": {
     "vue": "^2.5.22"
   },
-  "main": "./dist/vue-long-click.common.js",
+  "main": "./dist/libs/vue-long-click.common.js",
   "files": [
     "dist/*",
     "src/*"
