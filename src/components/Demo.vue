@@ -1,14 +1,16 @@
 <template>
-  <div class="container">
-    <p class="counter">{{counter}}</p>
-    <div class="actions">
-      <div class="actions-inner">
-        <button
-          v-longclick="() => changeValue(1)"
-          @click="changeValue(1)">+</button>
-        <button
-          v-longclick="() => changeValue(-1)"
-          @click="() => changeValue(-1)">-</button>
+  <div class="center">
+    <div class="container">
+      <p class="counter">{{counter}}</p>
+      <div class="actions">
+        <div class="actions-inner">
+          <button
+            v-longclick="() => changeValue(1)"
+            @click="changeValue(1)">+</button>
+          <button
+            v-longclick="() => changeValue(-1)"
+            @click="() => changeValue(-1)">-</button>
+        </div>
       </div>
     </div>
   </div>
@@ -39,11 +41,8 @@ a {
 }
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  display: inline-block;
   box-shadow: 0 0 25px rgba(0,0,0,0.08);
-  transform: translateX(-50%) translateY(-50%);
   width: 300px;
   height: 200px;
   padding-bottom: 20px;
@@ -54,6 +53,10 @@ a {
   font-size: 40px;
   margin-bottom: 15px;
   color: #4B1248;
+}
+
+.center {
+  text-align: center;
 }
 
 button {
