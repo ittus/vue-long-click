@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import longClick from './directives/longclick'
+import { longClickDirective } from './index'
 
 Vue.config.productionTip = false
 
-const longClickInstance = longClick({})
+const longClickInstance = longClickDirective({delay: 400, interval: 50})
 Vue.directive('longclick', longClickInstance)
 
 new Vue({

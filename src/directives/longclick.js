@@ -1,4 +1,4 @@
-export default () => ({
+export default ({delay = 400, interval = 50}) => ({
   bind: function (el, binding, vNode) {
     if (typeof binding.value !== 'function') {
       const compName = vNode.context.name
@@ -17,10 +17,13 @@ export default () => ({
 
       if (pressTimer === null) {
         pressTimer = setTimeout(() => {
-          pressInterval = setInterval(() => {
-            handler()
-          }, 50)
-        }, 400)
+          if (interval && interval > 0) {
+            pressInterval = setInterval(() => {
+              handler()
+            }, interval)
+          }
+          handler()
+        }, delay)
       }
     }
 
