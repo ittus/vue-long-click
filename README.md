@@ -23,12 +23,28 @@ const longClickInstance = longClickDirective({delay: 400, interval: 50})
 Vue.directive('longclick', longClickInstance)
 ```
 
+## CDN
+
+Include vue-long-click library from cdn
+```html
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-long-click@0.0.4/dist/libs/vue-long-click.umd.min.js"></script>
+```
+
+and create custom directive to use
+
+```javascript
+const longClickInstance = window['vue-long-click'].longClickDirective({delay: 400, interval: 50})
+Vue.directive('longclick', longClickInstance)
+```
+[CDN Demo on codepen](https://codepen.io/ittus/pen/BbeZOQ)
+
+
 ## Usage
 
 ```javascript
 <button v-longclick="() => changeValue(1)">+</button>
 ```
-
 
 ## Config
 
