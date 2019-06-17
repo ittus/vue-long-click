@@ -51,7 +51,8 @@ Vue.directive('longclick', longClickInstance)
 | Prop                  | Type            | Default     | Description                              |
 |-----------------------|-----------------|-------------|------------------------------------------|
 | delay                 | Integer (milliseconds)    |      400     | Delay until long click function is fired             |
-| interval                  | Integer (milliseconds)         |    50         | If value is greater than 0, handler function will be fire every `interval` milliseconds when component is pressed
+| interval                  | Integer (milliseconds)         |    50         | If value is greater than 0, handler function will be fire every `interval` milliseconds when component is pressed |
+| replacesClick         | Boolean         |   false     | Suppress regular click events during long click |
 
 ## Development
 
