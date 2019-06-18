@@ -38,15 +38,17 @@ export default ({delay = 400, interval = 50, replacesClick = false}) => ({
         clearInterval(pressInterval)
         pressInterval = null
       }
+
+      suppressNextClick = false
     }
 
     const click = (e) => {
       if (suppressNextClick) {
         // prevent handlers for regular click firing
         e.stopPropagation()
-
-        suppressNextClick = false
       }
+
+      cancel()
     }
 
     // Run Function
