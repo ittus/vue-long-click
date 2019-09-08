@@ -44,11 +44,7 @@ export default ({delay = 400, interval = 50, replacesClick = false}) => ({
 
     const click = (e) => {
       if (suppressNextClick) {
-        // prevent handlers for regular click firing
-        e.stopPropagation()
-
-        // suppress other click handlers on this element, see
-        // https://github.com/ittus/vue-long-click/pull/2
+        // prevent any handlers for regular click firing
         e.stopImmediatePropagation()
       }
 
