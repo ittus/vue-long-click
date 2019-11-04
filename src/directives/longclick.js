@@ -1,4 +1,4 @@
-export default ({delay = 400, interval = 50}) => ({
+export default ({delay = 400, interval = 50, replacesClick = false}) => ({
   bind: function (el, binding, vNode) {
     if (typeof binding.value !== 'function') {
       const compName = vNode.context.name
@@ -9,6 +9,7 @@ export default ({delay = 400, interval = 50}) => ({
 
     let pressTimer = null
     let pressInterval = null
+    let suppressNextClick = false
 
     const start = (e) => {
       if (e.type === 'click' && e.button !== 0) {
@@ -37,13 +38,30 @@ export default ({delay = 400, interval = 50}) => ({
         clearInterval(pressInterval)
         pressInterval = null
       }
+
+      suppressNextClick = false
     }
+
+    const click = (e) => {
+      if (suppressNextClick) {
+        // prevent any handlers for regular click firing
+        e.stopImmediatePropagation()
+      }
+
+      cancel()
+    }
+
     // Run Function
     const handler = (e) => {
       binding.value(e)
+
+      suppressNextClick = replacesClick
     }
 
     ;['mousedown', 'touchstart'].forEach(e => el.addEventListener(e, start))
     ;['click', 'mouseout', 'touchend', 'touchcancel'].forEach(e => el.addEventListener(e, cancel))
+
+    // suppress relevant click events before they are handled anywhere else
+    el.addEventListener('click', click, { capture: true })
   }
 })
