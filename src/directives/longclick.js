@@ -43,7 +43,12 @@ export default ({delay = 400, interval = 50}) => ({
       binding.value(e)
     }
 
-    ;['mousedown', 'touchstart'].forEach(e => el.addEventListener(e, start))
-    ;['click', 'mouseout', 'touchend', 'touchcancel'].forEach(e => el.addEventListener(e, cancel))
+    ;['mousedown', 'touchstart'].forEach(e => {
+      el.addEventListener(e, start, { passive: true })
+    })
+
+    ;['click', 'mouseout', 'touchend', 'touchcancel'].forEach(e => {
+      el.addEventListener(e, cancel, { passive: true })
+    })
   }
 })
