@@ -19,10 +19,10 @@ export default ({delay = 400, interval = 50}) => ({
         pressTimer = setTimeout(() => {
           if (interval && interval > 0) {
             pressInterval = setInterval(() => {
-              handler()
+              handler(e)
             }, interval)
           }
-          handler()
+          handler(e)
         }, delay)
       }
     }
