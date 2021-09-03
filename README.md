@@ -57,17 +57,17 @@ Vue.directive('longclick', longClickInstance)
 
 ```bash
 ## Project setup
-yarn install
+npm install
 
 ## Compiles and hot-reloads for development
-yarn run serve
+npm run serve
 
 ## Build library
-yarn run build:lib
+npm run build:lib
 
 ## Run tests
-yarn run test
+npm run test
 
 ## Lints and fixes files
-yarn run lint
+npm run lint
 ```
