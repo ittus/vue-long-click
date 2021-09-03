@@ -1,4 +1,4 @@
-name: Release
+name: Test and Release
 on:
   push:
   workflow_dispatch:
@@ -61,4 +61,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release -d
+        run: npx semantic-release

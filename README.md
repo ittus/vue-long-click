@@ -3,7 +3,6 @@
 > Vue long click (longpress) directive
 
 [![npm version](https://badge.fury.io/js/vue-long-click.svg)](https://www.npmjs.com/package/vue-long-click)
-[![CircleCI](https://circleci.com/gh/ittus/vue-long-click.svg?style=shield)](https://circleci.com/gh/ittus/vue-long-click)
 ![Size](https://badgen.net/bundlephobia/min/vue-long-click)
 
 Checkout the demo at https://ittus.github.io/vue-long-click/
