@@ -11,7 +11,7 @@ export default ({delay = 400, interval = 50}) => ({
     let pressInterval = null
 
     const start = (e) => {
-      if (e.type === 'click' && e.button !== 0) {
+      if (e.type === 'mousedown' && e.button !== 0) {
         return
       }
 
