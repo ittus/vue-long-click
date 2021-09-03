@@ -8,7 +8,7 @@
   "homepage": "https://github.com/ittus/vue-long-click",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ittus/vue-long-click"
+    "url": "https://github.com/ittus/vue-long-click"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
