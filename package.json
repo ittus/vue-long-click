@@ -13,7 +13,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build:docs": "vue-cli-service build --dest dist/docs",
-    "build": "yarn build:docs && yarn build:lib",
+    "build": "npm run build:docs && npm run build:lib",
     "lint": "vue-cli-service lint",
     "build:lib": "vue-cli-service build --target lib --dest dist/libs --name vue-long-click ./src/index.js",
     "test": "NODE_ENV=test jest tests"
