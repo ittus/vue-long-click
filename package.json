@@ -1,6 +1,6 @@
 {
   "name": "vue-long-click",
-  "version": "0.0.4",
+  "version": "0.0.0-development",
   "private": false,
   "author": "Vu Minh Thang <vuminhthang.cm@gmail.com>",
   "description": "Long click (longpress) directive library for VueJS",
@@ -16,7 +16,8 @@
     "build": "npm run build:docs && npm run build:lib",
     "lint": "vue-cli-service lint",
     "build:lib": "vue-cli-service build --target lib --dest dist/libs --name vue-long-click ./src/index.js",
-    "test": "NODE_ENV=test jest tests"
+    "test": "NODE_ENV=test jest tests",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "longpress",
