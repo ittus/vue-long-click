@@ -1,6 +1,6 @@
 {
   "name": "vue-long-click",
-  "version": "0.0.4",
+  "version": "0.1.0-beta.1",
   "private": false,
   "author": "Vu Minh Thang <vuminhthang.cm@gmail.com>",
   "description": "Long click (longpress) directive library for VueJS",
@@ -8,7 +8,7 @@
   "homepage": "https://github.com/ittus/vue-long-click",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ittus/vue-long-click"
+    "url": "https://github.com/ittus/vue-long-click"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -16,7 +16,8 @@
     "build": "npm run build:docs && npm run build:lib",
     "lint": "vue-cli-service lint",
     "build:lib": "vue-cli-service build --target lib --dest dist/libs --name vue-long-click ./src/index.js",
-    "test": "NODE_ENV=test jest tests"
+    "test": "NODE_ENV=test jest tests",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "longpress",
@@ -34,6 +35,11 @@
   ],
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/npm": "^7.1.3",
+    "@semantic-release/release-notes-generator": "^9.0.3",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
@@ -44,6 +50,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "jest": "^24.1.0",
+    "semantic-release": "^17.4.7",
     "vue-template-compiler": "^2.5.22"
   },
   "eslintConfig": {
