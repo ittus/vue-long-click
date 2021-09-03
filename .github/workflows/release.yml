@@ -1,6 +1,5 @@
-name: Test and Release
+name: Release
 on:
-  push:
   workflow_dispatch:
 jobs:
   test:
