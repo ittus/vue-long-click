@@ -1,5 +1,6 @@
 export default ({delay = 400, interval = 50}) => ({
-  bind: function (el, binding, vNode) {
+  beforeMount(el, binding, vNode, prevVnode) 
+  {
     if (typeof binding.value !== 'function') {
       const compName = vNode.context.name
       let warn = `[longclick:] provided expression '${binding.expression}' is not a function, but has to be`
@@ -9,6 +10,11 @@ export default ({delay = 400, interval = 50}) => ({
 
     let pressTimer = null
     let pressInterval = null
+
+    // Run Function
+    const handler = (e) => {
+      binding.value(e)
+    }
 
     const start = (e) => {
       if (e.type === 'click' && e.button !== 0) {
@@ -38,10 +44,6 @@ export default ({delay = 400, interval = 50}) => ({
         pressInterval = null
       }
     }
-    // Run Function
-    const handler = (e) => {
-      binding.value(e)
-    }
 
     ;['mousedown', 'touchstart'].forEach(e => {
       el.addEventListener(e, start, { passive: true })
@@ -51,4 +53,11 @@ export default ({delay = 400, interval = 50}) => ({
       el.addEventListener(e, cancel, { passive: true })
     })
   }
+  ,
+  created() {}, // new
+  mounted() {},
+  beforeUpdate() {}, // new
+  updated() {},
+  beforeUnmount() {}, // new
+  unmounted() {}
 })
